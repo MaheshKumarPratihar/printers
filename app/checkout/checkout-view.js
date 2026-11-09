@@ -1,4 +1,5 @@
 'use client';
+import { sitePath } from '../site-path';
 
 import { useId, useRef, useState } from 'react';
 import { useCart } from '../cart-provider';
@@ -51,7 +52,7 @@ export default function CheckoutView() {
 
   return <div className="checkout-screen">
     <header className="checkout-header">
-      <div className="checkout-shell"><a className="brand-image" href="/" aria-label="InkjetProGuide home" /></div>
+      <div className="checkout-shell"><a className="brand-image" href={sitePath('/')} aria-label="InkjetProGuide home" /></div>
     </header>
     <main className="checkout-shell checkout-layout">
       <div className="checkout-details">
@@ -61,7 +62,7 @@ export default function CheckoutView() {
           <h2>Your order has been confirmed</h2>
           <p>We’ll get back to you soon.</p>
           <p><strong>Demo confirmation.</strong> No order was sent and no follow-up will be triggered.</p>
-          <a className="checkout-link" href="/products/">Continue shopping</a>
+          <a className="checkout-link" href={sitePath('/products/')}>Continue shopping</a>
         </div> : ready && items.length > 0 ? <form autoComplete="off" onSubmit={event => {
           event.preventDefault();
           setConfirmed(true);
@@ -86,8 +87,8 @@ export default function CheckoutView() {
             </div>
           </section>
           <button className="checkout-pay" type="submit">Confirm order</button>
-        </form> : ready ? <p>Your cart is empty. <a className="checkout-link" href="/products/">Browse the catalogue</a></p> : <p role="status">Loading your cart…</p>}
-        <p className="checkout-policy-note">Policy shown for reference. <a className="checkout-link" href="/privacy/">Preview privacy notice</a></p>
+        </form> : ready ? <p>Your cart is empty. <a className="checkout-link" href={sitePath('/products/')}>Browse the catalogue</a></p> : <p role="status">Loading your cart…</p>}
+        <p className="checkout-policy-note">Policy shown for reference. <a className="checkout-link" href={sitePath('/privacy/')}>Preview privacy notice</a></p>
         <button type="button" className="checkout-link checkout-policy-link" onClick={() => policy.current.showModal()}>Privacy policy</button>
       </div>
       <aside className="checkout-order" aria-label="Order summary">

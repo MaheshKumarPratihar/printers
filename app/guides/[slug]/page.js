@@ -1,3 +1,4 @@
+import { sitePath } from '../../site-path';
 import GuideIcon from '../../guide-icon';
 import { notFound } from 'next/navigation';
 import Storefront from '../../storefront';
@@ -29,7 +30,7 @@ export default async function Page({ params }) {
     {readTime && <div className="container guide-reading guide-reading-time"><span className="guide-read-time">{readTime}</span></div>}
     <header className="guide-article-hero">
       <div className="container guide-reading">
-        <nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/guides/">Buying Guides</a><span>/</span><span aria-current="page">{title}</span></nav>
+        <nav className="breadcrumbs" aria-label="Breadcrumb"><a href={sitePath('/')}>Home</a><span>/</span><a href={sitePath('/guides/')}>Buying Guides</a><span>/</span><span aria-current="page">{title}</span></nav>
         <GuideIcon category={guide.category} />
         <h1>{title}</h1>
         <p>{guide.introduction ?? guide.description}</p>
@@ -45,12 +46,12 @@ export default async function Page({ params }) {
       </section>}
       {guide.relatedCategories?.length > 0 && <section>
         <h2>Explore related printer categories</h2>
-        {guide.relatedCategories.map(({ label, href }) => <p key={href}><a className="text-link" href={href}>{label}</a></p>)}
+        {guide.relatedCategories.map(({ label, href }) => <p key={href}><a className="text-link" href={sitePath(href)}>{label}</a></p>)}
       </section>}
       <aside className="card guide-cta">
         <h2>Ready to Find Your Perfect Printer?</h2>
         <p>Browse the catalogue or keep exploring the buying guides.</p>
-        <div className="library-actions"><a className="button" href="/products/">Browse All Printers</a><a className="button secondary" href="/guides/">View All Guides</a></div>
+        <div className="library-actions"><a className="button" href={sitePath('/products/')}>Browse All Printers</a><a className="button secondary" href={sitePath('/guides/')}>View All Guides</a></div>
       </aside>
     </article>
     </div>

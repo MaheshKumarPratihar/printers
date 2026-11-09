@@ -1,3 +1,4 @@
+import { sitePath } from '../site-path';
 import Storefront from '../storefront';
 import Catalogue from '../catalogue';
 import { scannerCatalogue } from '../products';
@@ -10,7 +11,7 @@ export const metadata = {
 export default function Page() {
   return <Storefront page="scanners">
     <nav className="container breadcrumbs scanner-width" aria-label="Breadcrumb">
-      <a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Scanners</span>
+      <a href={sitePath('/')}>Home</a><span aria-hidden="true">/</span><span aria-current="page">Scanners</span>
     </nav>
     <section className="scanner-hero">
       <div className="container hero-grid scanner-width">
@@ -21,7 +22,7 @@ export default function Page() {
           <a className="button" href="#catalogue">Shop Scanners <span aria-hidden="true">→</span></a>
         </div>
         <div className="card scanner-visual">
-          <img src="/images/scanner-hero.png" width="1000" height="720" alt="HP ScanJet Pro 2600 f1 document scanner" />
+          <img src={sitePath('/images/scanner-hero.png')} width="1000" height="720" alt="HP ScanJet Pro 2600 f1 document scanner" />
         </div>
       </div>
     </section>
@@ -42,22 +43,22 @@ export default function Page() {
       </section>
       <section>
         <h2>Keep scanning separate from printing</h2>
-        <p>A dedicated scanner makes sense when digitizing paper is the main job and printing is already covered elsewhere. If you also need to print and copy, compare the <a className="text-link" href="/all-in-one-printers/">all-in-one collection</a>. This page lists standalone scanners.</p>
+        <p>A dedicated scanner makes sense when digitizing paper is the main job and printing is already covered elsewhere. If you also need to print and copy, compare the <a className="text-link" href={sitePath('/all-in-one-printers/')}>all-in-one collection</a>. This page lists standalone scanners.</p>
       </section>
     </article>
     <section className="section muted">
       <div className="container scanner-width grid two related-guides">
         <div className="card">
           <h2>Related buying guides</h2>
-          <a href="/guides/all-in-one-vs-print-only/">All-in-one versus print-only printers</a>
-          <a href="/guides/home-use/">Plan a home-office workspace</a>
-          <a href="/guides/wireless-setup/">Understand wired and wireless connections</a>
+          <a href={sitePath('/guides/all-in-one-vs-print-only/')}>All-in-one versus print-only printers</a>
+          <a href={sitePath('/guides/home-use/')}>Plan a home-office workspace</a>
+          <a href={sitePath('/guides/wireless-setup/')}>Understand wired and wireless connections</a>
         </div>
         <div className="card">
           <h2>Explore related categories</h2>
-          <a href="/all-in-one-printers/">Printers with scanning and copying</a>
-          <a href="/office-printers/">Browse work and office printers</a>
-          <a href="/home-printers/">Explore home printers</a>
+          <a href={sitePath('/all-in-one-printers/')}>Printers with scanning and copying</a>
+          <a href={sitePath('/office-printers/')}>Browse work and office printers</a>
+          <a href={sitePath('/home-printers/')}>Explore home printers</a>
         </div>
       </div>
     </section>
@@ -65,7 +66,7 @@ export default function Page() {
       <h2>Scanner FAQ</h2>
       <article className="card">
         <h3>Are these scanners or all-in-one printers?</h3>
-        <p>This collection shows dedicated scanners. For a device that also prints, use the <a className="text-link" href="/all-in-one-printers/">All-in-One Printers</a> page and check the functions of the individual model.</p>
+        <p>This collection shows dedicated scanners. For a device that also prints, use the <a className="text-link" href={sitePath('/all-in-one-printers/')}>All-in-One Printers</a> page and check the functions of the individual model.</p>
       </article>
       <article className="card">
         <h3>Should I choose a flatbed or a sheet-feed scanner?</h3>

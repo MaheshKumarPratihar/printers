@@ -1,4 +1,5 @@
 'use client';
+import { sitePath } from './site-path';
 import { useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { useCart } from './cart-provider';
@@ -11,7 +12,7 @@ export default function CartView() {
   const [pending, startTransition] = useTransition();
   return <section className="container cart-page">
     <h1>Your Cart</h1>
-    {!ready ? <p role="status">Loading your cart…</p> : items.length === 0 ? <div className="card empty-results"><h2>Your cart is empty</h2><p>Browse the catalogue and add a printer to compare your selections here.</p><a className="button" href="/products/#catalogue">Browse printers</a></div> : <>
+    {!ready ? <p role="status">Loading your cart…</p> : items.length === 0 ? <div className="card empty-results"><h2>Your cart is empty</h2><p>Browse the catalogue and add a printer to compare your selections here.</p><a className="button" href={sitePath('/products/#catalogue')}>Browse printers</a></div> : <>
       <ul className="cart-page-items">{items.map(item => <li className="card cart-page-item" key={item.id}>
         <CatalogueImage product={item}/><div className="cart-item-description"><h2>{item.name}</h2><p>{money(item.cents)}</p></div>
         <div className="quantity-controls"><button aria-label={`Decrease quantity of ${item.name}`} onClick={() => updateQuantity(item.id, -1)}>−</button><span aria-label="Quantity" aria-live="polite">{item.quantity}</span><button disabled={item.quantity >= 99} aria-label={`Increase quantity of ${item.name}`} onClick={() => updateQuantity(item.id, 1)}>+</button></div>

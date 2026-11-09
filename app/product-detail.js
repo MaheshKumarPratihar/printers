@@ -1,4 +1,5 @@
 'use client';
+import { sitePath } from './site-path';
 
 import { useCart } from './cart-provider';
 import { CatalogueImage } from './catalogue';
@@ -8,7 +9,7 @@ export default function ProductDetail({ product }) {
   const { addToCart, ready } = useCart();
   return <section className="container section product-detail">
     <nav className="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a><span>/</span><a href="/products/">Catalogue</a>
+      <a href={sitePath('/')}>Home</a><span>/</span><a href={sitePath('/products/')}>Catalogue</a>
     </nav>
     <div className="grid two">
       <CatalogueImage product={product} />
