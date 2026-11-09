@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import { readCart, changeQuantity } from '../app/cart-state.mjs';
+const products = [{id:'envy', cents:22999}, {id:'tank', cents:42999}, {id:'tank2', cents:44999}];
+let cart = [];
+for (const product of products) cart = changeQuantity(cart, product.id, 1, products);
+assert.equal(cart.reduce((sum, item) => sum + products.find(p => p.id === item.id).cents * item.quantity, 0), 110997);
+assert.deepEqual(readCart(JSON.stringify(cart), products), cart);
+assert.deepEqual(readCart('broken json', products), []);
+assert.deepEqual(readCart(JSON.stringify([{id:'unknown',quantity:1},{id:'envy',quantity:-1},{id:'tank',quantity:2,cents:1},{id:'tank',quantity:3}]), products), [{id:'tank',quantity:2}]);
+cart = changeQuantity(cart, 'envy', 1, products);
+assert.equal(cart[0].quantity, 2);
+cart = changeQuantity(cart, 'envy', -2, products);
+assert.equal(cart.some(row => row.id === 'envy'), false);
+assert.equal(changeQuantity(cart,'tank',100,products).find(row=>row.id==='tank').quantity, 99);
+assert.deepEqual(changeQuantity(cart,'unknown',1,products), cart);
+console.log('Cart checks passed: subtotal, persistence, invalid storage, duplicate IDs, quantity changes, removal, and quantity limit.');
