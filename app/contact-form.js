@@ -15,7 +15,7 @@ export default function ContactForm({ email, topics }) {
   }
 
   return <section className="card contact-form-card" aria-labelledby="contact-form-title">
-    <h2 id="contact-form-title">Write to Paperline</h2>
+    <h2 id="contact-form-title">Send us a message</h2>
     <p>Include the printer model or page link if it helps explain your question.</p>
     <form onSubmit={prepareEmail} onChange={() => draft && setDraft(null)} className="contact-form">
       <div className="contact-form-pair">

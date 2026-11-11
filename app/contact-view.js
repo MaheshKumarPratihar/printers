@@ -19,22 +19,10 @@ export default function ContactView() {
     <header className="help-hero">
       <div className="container">
         <h1>Contact Us</h1>
-        <p>Have a question about a printer, a buying guide, or the website? Find answers by topic or prepare a message for Paperline.</p>
+        <p>Have a question about a printer, a buying guide, or the website? Use the form below or browse help by topic.</p>
       </div>
     </header>
     <div className="container contact-hub">
-      <section aria-labelledby="help-topics">
-        <h2 id="help-topics">What can we help with?</h2>
-        <div className="contact-topics">
-          {topics.map(([title, description, icon, href]) => (
-            <a className="card contact-topic" key={title} href={sitePath(href)}>
-              <span className="contact-topic-icon"><GuideIcon category={icon} /></span>
-              <span><strong>{title}</strong><span>{description}</span></span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          ))}
-        </div>
-      </section>
       <div className="contact-columns">
         <ContactForm email={email} topics={topics.map(([title]) => title)} />
         <aside className="contact-sidebar" aria-label="Support resources">
@@ -57,9 +45,20 @@ export default function ContactView() {
               <p>Include the page link and the detail you believe needs updating, such as a model number or compatibility note.</p>
             </details>
           </section>
-          <img className="support-photo" src={sitePath('/images/hp-officejet-workspace.webp')} width="1200" height="800" loading="lazy" decoding="async" alt="Illustration of an HP OfficeJet Pro on an office desk" />
         </aside>
       </div>
+      <section aria-labelledby="help-topics">
+        <h2 id="help-topics">What can we help with?</h2>
+        <div className="contact-topics">
+          {topics.map(([title, description, icon, href]) => (
+            <a className="card contact-topic" key={title} href={sitePath(href)}>
+              <span className="contact-topic-icon"><GuideIcon category={icon} /></span>
+              <span><strong>{title}</strong><span>{description}</span></span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   </>;
 }

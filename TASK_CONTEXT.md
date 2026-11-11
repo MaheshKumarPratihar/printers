@@ -117,10 +117,10 @@ No deployment or ad submission has been performed. No credentials or payment dat
 ## Guides and Contact
 
 - The homepage Read Buying Guides button, Guides navigation, and footer guide links open /guides/. The guide library links to existing buying advice and to the printer catalogue.
-- The header, footer, and guide library link to /contact/. The page has a topic grid, FAQs, and a form that prepares an email draft on the visitor’s device.
+- The header, footer, and guide library link to /contact/. The message form appears first, with FAQs and help topics nearby. It prepares an email draft on the visitor’s device.
 - Set `NEXT_PUBLIC_SUPPORT_EMAIL` to enable the link that opens the draft in an email app. The visitor sends the email. With no configured address, the form shows a copyable draft.
 - The Privacy Policy at /privacy/ explains local storage, browser-only checkout, support email, hosting logs, and privacy choices.
-- Catalogue images use individual WebP files. The storefront shell renders at build time, and interactive JavaScript is loaded for the components used by each page.
+- Homepage and category panels use HP product photos. Catalogue images use individual WebP files. The storefront shell renders at build time, and interactive JavaScript is loaded for the components used by each page.
 
 - Guides → Browse All Printers opens /products/. It uses the shared searchable catalogue and preview cart, with the eight models from the reference shown first.
 

@@ -50,7 +50,10 @@ export default function HomeShowcase({ guides }) {
             <a className="button secondary" href="#printers">Compare featured models</a>
           </div>
         </div>
-        <img className="home-masthead-photo" src={sitePath('/images/hp-envy-workspace.webp')} srcSet={`${sitePath('/images/hp-envy-workspace-mobile.webp')} 768w, ${sitePath('/images/hp-envy-workspace.webp')} 1280w`} sizes="(max-width: 800px) calc(100vw - 32px), (max-width: 1280px) 50vw, 640px" alt="Illustration of an HP ENVY printer on a home desk" width="1280" height="960" fetchPriority="high" />
+        <figure className="home-product-stage">
+          <img src={sitePath('/images/envy-7955e-hero.webp')} width="790" height="580" alt="HP ENVY Inspire 7955e printing a color photo" fetchPriority="high" />
+          <figcaption><a className="text-link" href={sitePath('/products/envy-7955e/')}>HP ENVY Inspire 7955e <span aria-hidden="true">↗</span></a></figcaption>
+        </figure>
       </div>
     </section>
 
