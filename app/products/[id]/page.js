@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const { id } = await params;
   const product = allProducts.find(item => item.id === id);
   if (!product) notFound();
-  return { title: product.name + ' | InkjetProGuide' };
+  return { title: product.name + ' | Paperline' };
 }
 
 export default async function Page({ params }) {

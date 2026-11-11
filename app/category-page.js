@@ -35,6 +35,6 @@ export default function CategoryPage({ kind }) {
     </> : <div className="container office-introduction"><p>Choosing an office printer starts with the work passing through it. An independent consultant printing invoices has different needs from a team handling contracts, customer forms and presentation drafts. Think about the busiest part of your week, who needs access and whether scanning interrupts other tasks. A work printer should fit that workflow as well as the available desk or shared area. Here you can explore catalogue options, including HP printers, and compare their documented capabilities. Do not assume that an office label guarantees a particular speed, feeder or networking feature: confirm those details before making your shortlist.</p></div>}
     <Catalogue products={home ? homeCatalogue : officeCatalogue}/>
     {home && <HomeGuidance/>}
-    <p className="container manufacturer-note">InkjetProGuide is an independent storefront and is not affiliated with, authorized by or endorsed by HP Inc. HP, DeskJet, ENVY, OfficeJet and Smart Tank are trademarks of HP Inc., used here to identify products.</p>
+    <p className="container manufacturer-note">Paperline is an independent storefront and is not affiliated with, authorized by or endorsed by HP Inc. HP, DeskJet, ENVY, OfficeJet and Smart Tank are trademarks of HP Inc., used here to identify products.</p>
   </>;
 }

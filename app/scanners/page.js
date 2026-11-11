@@ -4,7 +4,7 @@ import Catalogue from '../catalogue';
 import { scannerCatalogue } from '../products';
 
 export const metadata = {
-  title: 'Document Scanners | InkjetProGuide',
+  title: 'Document Scanners | Paperline',
   description: 'Compare standalone sheet-feed, flatbed, and network document scanners.',
 };
 
@@ -81,6 +81,6 @@ export default function Page() {
         <p>Only if wireless connectivity is explicitly listed. Network access may use a wired connection, so compare the actual connection methods and software requirements with your workspace.</p>
       </article>
     </section>
-    <p className="container scanner-width manufacturer-note">InkjetProGuide is an independent storefront and is not affiliated with, authorized by or endorsed by HP Inc. HP and ScanJet are used here to identify products.</p>
+    <p className="container scanner-width manufacturer-note">Paperline is an independent storefront and is not affiliated with, authorized by or endorsed by HP Inc. HP and ScanJet are used here to identify products.</p>
   </Storefront>;
 }

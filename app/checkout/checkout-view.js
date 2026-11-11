@@ -1,11 +1,11 @@
 'use client';
 import { sitePath } from '../site-path';
+import Brand from '../brand';
 
 import { useId, useRef, useState } from 'react';
 import { useCart } from '../cart-provider';
 import { CatalogueImage } from '../catalogue';
 import { money } from '../products';
-import privacyPolicy from './privacy-policy.json';
 
 const states = 'Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|District of Columbia|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming'.split('|');
 
@@ -52,7 +52,7 @@ export default function CheckoutView() {
 
   return <div className="checkout-screen">
     <header className="checkout-header">
-      <div className="checkout-shell"><a className="brand-image" href={sitePath('/')} aria-label="InkjetProGuide home" /></div>
+      <div className="checkout-shell"><Brand /></div>
     </header>
     <main className="checkout-shell checkout-layout">
       <div className="checkout-details">
@@ -112,11 +112,9 @@ export default function CheckoutView() {
         <button type="button" aria-label="Close privacy policy" onClick={() => policy.current.close()} autoFocus>×</button>
       </div>
       <div className="checkout-policy-body" tabIndex={0}>
-        {privacyPolicy.map(([kind, value], index) => {
-          if (kind === 'heading') return <h3 key={index}>{value}</h3>;
-          if (kind === 'list') return <ul key={index}>{value.map(item => <li key={item}>{item}</li>)}</ul>;
-          return <p key={index}>{value}</p>;
-        })}
+        <p>Checkout is a demo. Use sample details to try the form. The information you enter stays in your browser and no order or payment is created.</p>
+        <p>Your browser stores the models and quantities in your cart so you can return to them later. Clearing your cart or site data removes those selections.</p>
+        <p><a className="checkout-link" href={sitePath('/privacy/')}>Read the full preview privacy notice</a></p>
       </div>
     </dialog>
   </div>;

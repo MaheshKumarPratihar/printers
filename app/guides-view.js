@@ -7,7 +7,7 @@ export default function GuidesView() {
     <section className="guide-library-hero"><div className="container">
       <p className="library-eyebrow">{guideLibrary.length} PRINTER BUYING GUIDES</p>
       <h1>Inkjet Printer Guide Library</h1>
-      <p className="library-disclosure">All buying guides are informational only. InkjetProGuide is an independent storefront. Product names are used to identify products; this site is not affiliated with or endorsed by printer manufacturers.</p>
+      <p className="library-disclosure">All buying guides are informational only. Paperline is an independent storefront. Product names are used to identify products; this site is not affiliated with or endorsed by printer manufacturers.</p>
       <p className="library-description">Your resource for inkjet printer buying decisions, everyday printing needs, ink costs, and compatibility.</p>
       <div className="library-benefits"><span><span aria-hidden="true">▤</span> Practical buying guidance</span><span><span aria-hidden="true">✓</span> Compare features and costs</span><span><span aria-hidden="true">ϟ</span> Find your next printer</span></div>
       <div className="library-tags"><span>Buying Advice</span><span>Plan Your Budget</span><span>Make Informed Choices</span><a href={sitePath('/inkjet-printers/')}>Explore Available Printers</a></div>

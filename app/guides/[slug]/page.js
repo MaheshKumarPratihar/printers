@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const guide = allGuideArticles.find(article => article.slug === slug);
   if (!guide) notFound();
-  return { title: guide.title + ' | InkjetProGuide', description: guide.description };
+  return { title: guide.title + ' | Paperline', description: guide.description };
 }
 
 export default async function Page({ params }) {
