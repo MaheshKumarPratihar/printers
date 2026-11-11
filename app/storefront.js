@@ -85,7 +85,7 @@ export default function Storefront({ inkjet = false, page = 'home', children }) 
           <a href={sitePath('/privacy/')}>Privacy notice</a>
         </div>
       </div>
-      <p className="shop-footer-note">Paperline is an independent catalogue preview. Manufacturer and model names identify the listed products.</p>
+      <p className="shop-footer-note">Paperline is an independent printer catalogue. Manufacturer and model names identify the listed products.</p>
     </div>
   </footer>
  </>;

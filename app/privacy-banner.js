@@ -56,7 +56,7 @@ export default function PrivacyBanner() {
     <p>This site uses browser storage to remember your cart and privacy choice. <a href={sitePath('/privacy/')}>Privacy Policy</a></p>
     {preferences && <div id="privacy-options" className="privacy-banner-options">
       <strong>Essential storage</strong>
-      <p>Your cart and privacy choice use local storage. This preview has no optional analytics or advertising cookies.</p>
+      <p>Your cart and privacy choice use local storage. Paperline uses no optional analytics or advertising cookies.</p>
     </div>}
     <div className="privacy-banner-actions">
       <button className="button" type="button" onClick={() => save('accepted')}>Accept All</button>

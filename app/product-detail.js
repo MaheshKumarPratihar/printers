@@ -16,7 +16,7 @@ export default function ProductDetail({ product }) {
       <div>
         <h1>{product.name}</h1>
         <p className="catalogue-price">{money(product.cents)}</p>
-        <p>Preview catalogue · Prices shown in USD</p>
+        <p>Prices shown in USD</p>
         <button className="button" disabled={!ready} onClick={() => addToCart(product.id)}>Add to cart</button>
       </div>
     </div>

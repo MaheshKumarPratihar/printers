@@ -24,7 +24,7 @@ const questions = [
   ['Should I choose inkjet or laser?', 'Inkjet is a good place to start for photos and mixed color work. Laser is worth comparing if you mostly print text in batches. Check the specific model’s running costs and paper support.'],
   ['When does a refillable ink tank make sense?', 'If you print frequently, compare the cost of refills and estimated page yields alongside the purchase price. Estimate your monthly volume before deciding.'],
   ['Do I need a separate scanner?', 'An all-in-one can cover occasional scanning and copying. For regular batches, compare dedicated scanners by feeder capacity, supported document sizes and two-sided scanning.'],
-  ['Can I place an order through this site?', 'Paperline is a catalogue preview. You can browse listings and try the cart and checkout with sample details. The preview does not place orders or take payments.'],
+  ['Can I place an order through this site?', 'You can build a cart and check delivery details. Online order submission is currently unavailable.'],
 ];
 
 const modelById = new Map(allProducts.map(product => [product.id, product]));

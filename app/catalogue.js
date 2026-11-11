@@ -26,7 +26,7 @@ export default function Catalogue({ products = catalogueProducts, itemName = "pr
       <input id="printer-search" type="search" value={input} onChange={event => { setInput(event.target.value); if (!event.target.value) setQuery(''); }} placeholder={`Search ${itemName}...`} />
       <button className="button" type="submit">Search</button>
     </form>
-    <p className="catalogue-notice">Preview catalogue · Prices shown in USD · Orders and payments are not available yet.</p>
+    <p className="catalogue-notice">Prices shown in USD</p>
     <div role="status" className="catalogue-status">{query ? `${results.length} matching products found for “${query}”` : `${results.length} matching products`}</div>
     {results.length ? <div className="grid four catalogue-grid">
       {results.map(product => <ProductCard key={product.id} product={product} />)}
