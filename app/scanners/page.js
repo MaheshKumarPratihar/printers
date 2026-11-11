@@ -22,7 +22,7 @@ export default function Page() {
           <a className="button" href="#catalogue">Shop Scanners <span aria-hidden="true">→</span></a>
         </div>
         <div className="card scanner-visual">
-          <img src={sitePath('/images/scanner-hero.png')} width="1000" height="720" alt="HP ScanJet Pro 2600 f1 document scanner" />
+          <img src={sitePath('/images/scanner-hero.webp')} width="760" height="547" fetchPriority="high" alt="HP ScanJet Pro 2600 f1 document scanner" />
         </div>
       </div>
     </section>

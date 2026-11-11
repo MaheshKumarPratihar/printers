@@ -2,7 +2,7 @@
 import { sitePath } from './site-path';
 
 import { useCart } from './cart-provider';
-import { CatalogueImage } from './catalogue';
+import CatalogueImage from './catalogue-image';
 import { money } from './products';
 
 export default function ProductDetail({ product }) {
@@ -12,7 +12,7 @@ export default function ProductDetail({ product }) {
       <a href={sitePath('/')}>Home</a><span>/</span><a href={sitePath('/products/')}>Catalogue</a>
     </nav>
     <div className="grid two">
-      <CatalogueImage product={product} />
+      <CatalogueImage product={product} priority />
       <div>
         <h1>{product.name}</h1>
         <p className="catalogue-price">{money(product.cents)}</p>

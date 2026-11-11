@@ -4,7 +4,7 @@ import Brand from '../brand';
 
 import { useEffect, useId, useRef, useState } from 'react';
 import { useCart } from '../cart-provider';
-import { CatalogueImage } from '../catalogue';
+import CatalogueImage from '../catalogue-image';
 import { money } from '../products';
 
 import { states, phonePattern, zipPattern, nonBlankPattern } from '../delivery';

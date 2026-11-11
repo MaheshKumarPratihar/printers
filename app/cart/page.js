@@ -1,3 +1,4 @@
+import CartView from '../cart-view';
 import Storefront from '../storefront';
 export const metadata = { title: 'Your Cart | Paperline' };
-export default function Page() { return <Storefront page="cart" />; }
+export default function Page() { return <Storefront page="cart"><CartView /></Storefront>; }

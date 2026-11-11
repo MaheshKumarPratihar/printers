@@ -1,12 +1,3 @@
-const sheets = [
-  { width: 1522, height: 1428, left: 150, rows: [11, 487, 963] },
-  { width: 1450, height: 1434, left: 78, rows: [23, 499, 975] },
-  { width: 1364, height: 1434, left: 54, rows: [41, 517, 993] },
-  { width: 1344, height: 1438, left: 32, rows: [33, 509, 985] },
-  { width: 1298, height: 984, left: 18, rows: [23, 499] },
-];
-
-// Each group follows the image order in its corresponding catalogue sheet.
 const listings = [
   [
     ['envy-7955e', 'Envy 7955e Wireless Photo All-in-One Inkjet Printer', 22999, 'home', true],
@@ -76,20 +67,11 @@ const listings = [
   ],
 ];
 
-export const allProducts = listings.flatMap((group, sheetIndex) => group.map(
-  ([id, name, cents, category, allInOne = false], index) => {
-    const sheet = sheets[sheetIndex];
-    return {
-      id, name: 'HP ' + name, cents, category, allInOne,
-      image: {
-        url: '/images/catalogue/sheet-' + (sheetIndex + 1) + '.png',
-        width: sheet.width,
-        height: sheet.height,
-        x: sheet.left + (index % 4) * 318 + 2,
-        y: sheet.rows[Math.floor(index / 4)] + 2,
-      },
-    };
-  },
+export const allProducts = listings.flatMap(group => group.map(
+  ([id, name, cents, category, allInOne = false]) => ({
+    id, name: 'HP ' + name, cents, category, allInOne,
+    image: '/images/catalogue/' + id + '.webp',
+  }),
 ));
 
 export const shopCatalogue = allProducts;

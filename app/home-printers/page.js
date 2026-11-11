@@ -1,3 +1,4 @@
+import CategoryPage from '../category-page';
 import Storefront from '../storefront';
 export const metadata = { title: 'Best Printers for Home | Paperline' };
-export default function Page() { return <Storefront page="home-printers" />; }
+export default function Page() { return <Storefront page="home-printers"><CategoryPage kind="home-printers" /></Storefront>; }

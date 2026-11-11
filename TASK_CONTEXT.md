@@ -117,11 +117,10 @@ No deployment or ad submission has been performed. No credentials or payment dat
 ## Guides and Contact
 
 - The homepage Read Buying Guides button, Guides navigation, and footer guide links open /guides/. The guide library links to existing buying advice and to the printer catalogue.
-- Contact Us in the guide library, Contact in the navigation, and Contact Us in the footer open /contact/. The page includes contact details from the reference, a message form, location, and order FAQs.
-- The contact form validates inputs in the browser. It is a preview with no message delivery or storage. Confirm the reference business details and connect delivery before launch.
-- Route files live in app/guides/ and app/contact/. Their views are in app/guides-view.js and app/contact-view.js, with responsive styling in app/globals.css.
-- The production build generated both routes successfully.
-- A valid contact form submission displays a dismissible bottom-right preview notification. The toast uses the reference “Message sent!” copy for the demo. The form remains labeled as a preview and does not deliver messages.
+- The header, footer, and guide library link to /contact/. The page has a topic grid, FAQs, and a form that prepares an email draft on the visitor’s device.
+- Set `NEXT_PUBLIC_SUPPORT_EMAIL` to enable the link that opens the draft in an email app. The visitor sends the email. With no configured address, the form shows a copyable draft.
+- The Privacy Policy at /privacy/ explains local storage, browser-only checkout, support email, hosting logs, and privacy choices.
+- Catalogue images use individual WebP files. The storefront shell renders at build time, and interactive JavaScript is loaded for the components used by each page.
 
 - Guides → Browse All Printers opens /products/. It uses the shared searchable catalogue and preview cart, with the eight models from the reference shown first.
 

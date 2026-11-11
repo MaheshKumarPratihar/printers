@@ -198,3 +198,27 @@ body { background: #fff; font-family: Inter, system-ui, sans-serif; }
   .policy-layout, .support-layout { grid-template-columns: minmax(0, 1fr); }
   .shop-footer-grid > div > a:not(.paperline-brand) { min-height: 44px; display: flex; align-items: center; }
 }
+
+.contact-hub { display: grid; gap: clamp(24px, 5vw, 56px); padding-block: clamp(28px, 5vw, 64px); }
+.contact-topics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.contact-topic { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 16px; }
+.contact-topic:hover { border-color: var(--accent-border); }
+.contact-topic strong, .contact-topic strong + span { display: block; }
+.contact-topic strong + span { color: var(--muted); font-size: .9rem; margin-top: 4px; }
+.contact-topic .guide-emblem { width: 34px; height: 34px; }
+.contact-topic .guide-emblem svg { width: 18px; height: 18px; }
+.contact-columns { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(16px, 3vw, 32px); align-items: start; }
+.contact-sidebar, .contact-form, .contact-form-pair { display: grid; gap: 16px; }
+.contact-form-card { padding: clamp(16px, 3vw, 28px); }
+.contact-form-card h2 { font-size: 1.4rem; }
+.contact-form-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.contact-form label, .contact-draft { display: grid; gap: 6px; font-size: .94rem; font-weight: 600; }
+.contact-form :is(input, select, textarea), .contact-draft textarea { width: 100%; min-width: 0; min-height: 44px; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: #fff; color: var(--ink); font: inherit; font-size: 1rem; font-weight: normal; }
+.contact-form textarea { resize: vertical; }
+.contact-form-note { margin: 0; font-size: .875rem; }
+.contact-form-note a { text-decoration: underline; }
+.contact-sidebar details + details { border-top: 1px solid var(--line); }
+.contact-sidebar summary { min-height: 44px; padding-block: 10px; cursor: pointer; }
+@media (max-width: 900px) { .contact-topics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .contact-columns { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 500px) { .contact-topics, .contact-form-pair { grid-template-columns: minmax(0, 1fr); } }

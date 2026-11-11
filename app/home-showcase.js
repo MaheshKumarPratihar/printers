@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { CatalogueImage, ProductCard } from './catalogue';
-import { homepageGuides } from './guide-articles';
+import { ProductCard } from './catalogue';
+import CatalogueImage from './catalogue-image';
 import { allProducts, homeCatalogue, officeCatalogue, allInOneCatalogue, scannerCatalogue, money } from './products';
 import { sitePath } from './site-path';
 
@@ -29,7 +29,7 @@ const questions = [
 
 const modelById = new Map(allProducts.map(product => [product.id, product]));
 
-export default function HomeShowcase() {
+export default function HomeShowcase({ guides }) {
   const [group, setGroup] = useState(0);
   const [selection, setSelection] = useState([]);
   const selectedProducts = selection.map(id => modelById.get(id));
@@ -50,7 +50,7 @@ export default function HomeShowcase() {
             <a className="button secondary" href="#printers">Compare featured models</a>
           </div>
         </div>
-        <img className="home-masthead-photo" src={sitePath('/images/hp-envy-workspace.webp')} alt="Illustration of an HP ENVY printer on a home desk" width="1280" height="960" fetchPriority="high" />
+        <img className="home-masthead-photo" src={sitePath('/images/hp-envy-workspace.webp')} srcSet={`${sitePath('/images/hp-envy-workspace-mobile.webp')} 768w, ${sitePath('/images/hp-envy-workspace.webp')} 1280w`} sizes="(max-width: 800px) calc(100vw - 32px), (max-width: 1280px) 50vw, 640px" alt="Illustration of an HP ENVY printer on a home desk" width="1280" height="960" fetchPriority="high" />
       </div>
     </section>
 
@@ -116,7 +116,7 @@ export default function HomeShowcase() {
         <a className="text-link" href={sitePath('/guides/')}>Guide library <span aria-hidden="true">↗</span></a>
       </div>
       <div className="home-guides">
-        {homepageGuides.map(guide => <a key={guide.slug} href={sitePath(`/guides/${guide.slug}/`)}>
+        {guides.map(guide => <a key={guide.slug} href={sitePath(`/guides/${guide.slug}/`)}>
           <span>{guide.category}</span><h3>{guide.title}</h3><span className="guide-arrow" aria-hidden="true">↗</span>
         </a>)}
       </div>

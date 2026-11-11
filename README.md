@@ -20,10 +20,10 @@ Open http://localhost:3000. `npm run build` generates a static site in `out/`.
 - `app/category-page.js`: home/office landing sections and home buying guidance.
 - `app/cart-state.mjs` and `app/cart-provider.js`: validated browser-local cart. Run `node scripts/check-cart.mjs` for the cart regression check.
 - `app/globals.css`: theme colors, spacing, desktop and mobile layouts.
-- `public/images/`: supplied screenshot assets, displayed as cropped CSS backgrounds. Replace these with original product and logo files when available for sharper, smaller assets.
+- `public/images/`: local product images and workspace photography. Catalogue cards use individually cropped WebP files and lazy loading.
 
 ## Checkout
 
 Checkout checks contact and delivery details in the browser. The confirmation leaves the cart intact. The site does not submit orders or collect payments.
 
-Set `NEXT_PUBLIC_SUPPORT_EMAIL` before building to show the business email on the Contact and Privacy pages.
+Set `NEXT_PUBLIC_SUPPORT_EMAIL` before building to enable email links on the Contact page. The form prepares a draft in the browser and opens the visitor’s email app. The visitor sends it from that app.

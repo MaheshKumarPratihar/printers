@@ -1,3 +1,5 @@
+import ProductsView from '../products-view';
+import { shopCatalogue } from '../products';
 import Storefront from '../storefront';
 
 export const metadata = {
@@ -6,5 +8,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Storefront page="products" />;
+  return <Storefront page="products"><ProductsView title="Shop Printers for Home & Office" products={shopCatalogue} itemName="printers and scanners" /></Storefront>;
 }

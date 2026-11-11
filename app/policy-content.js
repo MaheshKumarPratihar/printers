@@ -3,16 +3,18 @@ const contact = ['Contact Us', '/contact/'];
 export const policies = {
   privacy: {
     title: 'Privacy Policy',
-    intro: 'How Paperline handles information when you browse the catalogue, use checkout, or contact us.',
+    intro: 'See what stays on your device, what reaches Paperline or its service providers, and how to make a privacy request.',
     sections: [
-      ['browser-storage', 'Cart and privacy preferences', 'Your browser stores product IDs, quantities, and your privacy choice on your device. Clearing Paperline’s site data removes these records and resets your cart and preferences.', ['Manage privacy preferences', '#privacy-preferences']],
-      ['checkout', 'Checkout details', 'The page checks the contact and delivery details you enter. Paperline does not transmit or retain those fields, create an order, or collect payment details.'],
-      ['hosting', 'Hosting and site operation', 'Our hosting provider receives ordinary web requests, which can include your IP address, browser information, and the page requested. The provider may keep logs for site operation, security, and troubleshooting.'],
-      ['support', 'Email and support', 'If you email Paperline, we receive your email address and the information you choose to send. We use it to respond and keep enough context to handle follow-up. Email and hosting providers may process information to deliver their services. Please keep payment credentials and sensitive documents out of routine messages.'],
-      ['tracking', 'Analytics and advertising', 'Paperline’s site does not install analytics tags or advertising pixels. Site visitors can control local storage through their browser settings. Other sites you visit from Paperline have their own privacy policies.'],
-      ['retention', 'How long information stays', 'Cart selections and privacy preferences remain on your device until you clear them or your browser removes them. Support correspondence may be retained while needed to resolve an inquiry, maintain records, or meet applicable obligations.'],
-      ['rights', 'Privacy requests', 'Depending on applicable law, you may be able to ask for access to, correction of, or deletion of personal information. Use Contact Us to find the available support channel and describe what you are requesting. We may need to verify your identity before acting on a request.', contact],
-      ['updates', 'Children and policy updates', 'Paperline is a general-audience printer catalogue. If you believe a child has shared personal information with us, please contact us so we can review it. We will update this page when our data practices change.'],
+      ['browser-storage', 'What your browser remembers', 'Paperline uses local storage to remember the model IDs and quantities in your cart and your privacy preference. You can remove these records by clearing this site’s data in your browser. Doing so resets your cart and preferences.', ['Manage privacy preferences', '#privacy-preferences']],
+      ['checkout', 'Information entered in checkout', 'Checkout checks details such as your email address and delivery ZIP code in your browser. The website does not send or save these fields, place an order, or collect payment details.'],
+      ['support', 'Messages you choose to send', 'The contact form prepares an email draft on your device. When an address is available, you can open the draft in your email app and send it yourself. We receive your email address and any information you include when you send a message. We use it to answer your inquiry and handle follow-up. Keep payment details, passwords, and sensitive documents out of routine messages.', contact],
+      ['hosting', 'Information received when you visit', 'The hosting provider receives web requests when it serves pages and images. These requests can include your IP address, browser information, the requested URL, and the time of the request. The provider may keep logs for site operation, security, and troubleshooting.'],
+      ['sharing', 'Service providers and external websites', 'Hosting and email providers handle the information needed to deliver their services. If you follow a link to a manufacturer or another website, that site handles any information you provide under its own privacy policy.'],
+      ['tracking', 'Analytics and advertising', 'Paperline does not use optional analytics cookies or advertising pixels on this website. Use your browser’s site settings to manage local storage.'],
+      ['retention', 'Retention and security', 'Your cart and privacy choice remain on your device until you clear them or your browser removes them. We may keep support correspondence while needed to resolve the inquiry, maintain records, or meet applicable obligations. Avoid sharing sensitive information through ordinary email.'],
+      ['rights', 'Your privacy choices and requests', 'Depending on where you live and the law that applies, you may be able to request access to, correction of, or deletion of personal information. Use Contact Us and describe your request. We may need to verify your identity before acting on it.', contact],
+      ['children', 'Children’s privacy', 'Paperline is intended for a general audience. If you believe a child has sent us personal information, contact us so we can review the matter.', contact],
+      ['updates', 'Changes to this policy', 'We update this page when our data practices change. The date at the top shows when the notice was revised.'],
     ],
   },
   purchase: {

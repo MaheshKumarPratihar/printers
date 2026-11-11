@@ -3,7 +3,7 @@ import { sitePath } from './site-path';
 import { useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { useCart } from './cart-provider';
-import { CatalogueImage } from './catalogue';
+import CatalogueImage from './catalogue-image';
 import { money } from './products';
 
 export default function CartView() {
