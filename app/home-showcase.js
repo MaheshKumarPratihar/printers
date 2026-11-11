@@ -50,7 +50,7 @@ export default function HomeShowcase() {
             <a className="button secondary" href="#printers">Compare featured models</a>
           </div>
         </div>
-        <img className="home-masthead-photo" src={sitePath('/images/paperline-hero.webp')} alt="" width="1200" height="900" fetchPriority="high" />
+        <img className="home-masthead-photo" src={sitePath('/images/hp-envy-workspace.webp')} alt="Illustration of an HP ENVY printer on a home desk" width="1280" height="960" fetchPriority="high" />
       </div>
     </section>
 

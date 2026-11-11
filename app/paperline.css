@@ -173,3 +173,28 @@ body { background: #fff; font-family: Inter, system-ui, sans-serif; }
 
 @media (max-width: 800px) { .order-columns { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 480px) { .delivery-fields { grid-template-columns: minmax(0, 1fr); } }
+
+/* Policies and support */
+.help-hero { background: linear-gradient(120deg, #102b2c, #174c46); color: #f5faf9; padding-block: clamp(36px, 7vw, 84px); }
+.help-hero h1 { font-size: clamp(2rem, 5vw, 3.8rem); margin-bottom: 12px; }
+.help-hero p { color: #d5e7e0; max-width: 65ch; margin-bottom: 0; }
+.help-hero .policy-date { margin-top: 16px; font-size: .875rem; }
+.policy-layout, .support-layout { display: grid; align-items: start; gap: clamp(16px, 3vw, 32px); padding-block: clamp(24px, 5vw, 60px); }
+.policy-layout { grid-template-columns: minmax(200px, .32fr) minmax(0, 1fr); }
+.policy-sections { display: grid; justify-items: start; gap: 16px; }
+.policy-contents, .policy-section { padding: clamp(16px, 3vw, 28px); }
+.policy-section { width: 100%; border-inline-start: 4px solid var(--accent); scroll-margin-block-start: 24px; }
+.policy-section h2, .policy-contents h2 { font-size: 1.2rem; margin-bottom: 10px; }
+.policy-section p:last-child { margin-bottom: 0; }
+.policy-section a { overflow-wrap: anywhere; }
+.policy-contents ul { margin: 0; padding: 0; list-style: none; }
+.policy-contents a { display: flex; align-items: center; min-height: 44px; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; }
+.support-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.support-photo { width: 100%; height: auto; border-radius: 14px; }
+@media (min-width: 701px) {
+  .shop-footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+}
+@media (max-width: 700px) {
+  .policy-layout, .support-layout { grid-template-columns: minmax(0, 1fr); }
+  .shop-footer-grid > div > a:not(.paperline-brand) { min-height: 44px; display: flex; align-items: center; }
+}

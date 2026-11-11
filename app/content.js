@@ -1,4 +1,4 @@
-export const navigation = [['Home', '/'], ['Inkjet Printers', '/inkjet-printers/'], ['Home Printers', '/home-printers/'], ['Office Printers', '/office-printers/'], ['All-in-One', '/all-in-one-printers/'], ['Scanners', '/scanners/'], ['Guides', '/guides/'], ['About', '/#about'], ['Contact', '/contact/']];
+export const navigation = [['Home', '/'], ['Inkjet Printers', '/inkjet-printers/'], ['Home Printers', '/home-printers/'], ['Office Printers', '/office-printers/'], ['All-in-One', '/all-in-one-printers/'], ['Scanners', '/scanners/'], ['Guides', '/guides/'], ['About', '/#about'], ['Contact Us', '/contact/']];
 export const categories = [
  ['Home Inkjet Printers', 'Compact and efficient inkjet printers designed for home-based professionals and remote workers. Wireless connectivity, mobile printing support, and quiet operation for shared living spaces.', '/home-printers/', 'printer'],
  ['Office Inkjet Printers', 'Perfect for teams who need reliable shared printing. Explore fast print speeds, automatic document feeders, duplex printing, and network connectivity.', '/office-printers/', 'chart'],
