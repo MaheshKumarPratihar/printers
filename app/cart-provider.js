@@ -86,16 +86,16 @@ export function CartProvider({ children }) {
               <svg viewBox="0 0 64 64" fill="none" className="cart-modal-icon">
                 <path
                   d="M10 14h7l6.5 24h24l5.5-16H18"
-                  stroke="#ffffff"
+                  stroke="currentColor"
                   strokeWidth="3.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-                <circle cx="25" cy="48.5" r="4" fill="#ffffff" />
-                <circle cx="43" cy="48.5" r="4" fill="#ffffff" />
+                <circle cx="25" cy="48.5" r="4" fill="currentColor" />
+                <circle cx="43" cy="48.5" r="4" fill="currentColor" />
                 <path
                   d="M26.5 27l5 5.5 11-11"
-                  stroke="#22c55e"
+                  stroke="#16a34a"
                   strokeWidth="4"
                   strokeLinecap="round"
                   strokeLinejoin="round"

@@ -18,23 +18,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(12, 6, 26, 0.65);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: #27231ca6;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   padding: 1rem;
   animation: cartFadeIn 0.2s ease-out;
 }
 
 .cart-modal-card {
   position: relative;
-  background: #38157a;
-  color: #ffffff;
-  border-radius: 14px;
+  background: #ffffff;
+  color: var(--ink);
+  border-radius: 16px;
   width: min(480px, calc(100vw - 2rem));
-  padding: 38px 32px 32px;
+  padding: 36px 32px 30px;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 80px #37332b26, 0 4px 16px #37332b0d;
+  border: 1px solid var(--line);
   animation: cartPopIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -50,7 +50,7 @@
   place-items: center;
   border: 0;
   background: transparent;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--muted);
   font-size: 26px;
   line-height: 1;
   border-radius: 50%;
@@ -60,39 +60,44 @@
 
 .cart-modal-close:hover,
 .cart-modal-close:focus-visible {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.12);
+  color: var(--ink);
+  background: var(--cream);
 }
 
 .cart-modal-icon-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 6px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--tint);
+  border: 1px solid #d0e8f5;
+  color: var(--accent-text);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
 }
 
 .cart-modal-icon {
-  width: 72px;
-  height: 72px;
+  width: 46px;
+  height: 46px;
 }
 
 .cart-modal-title {
-  color: #ffffff;
+  color: var(--ink);
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin: 12px 0 6px;
+  margin: 8px 0 6px;
 }
 
 .cart-modal-subtitle {
-  color: #cfc6ea;
+  color: var(--muted);
   font-size: 15px;
   line-height: 1.5;
-  margin: 0 0 28px;
+  margin: 0 0 26px;
 }
 
 .cart-modal-subtitle strong {
-  color: #ffffff;
+  color: var(--ink);
   font-weight: 700;
 }
 
@@ -108,39 +113,37 @@
   min-height: 44px;
   padding: 12px 20px;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 6px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .cart-modal-btn.continue {
-  background: #ffc700;
-  color: #111827;
-  border: 1px solid #ffc700;
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid #ded9cf;
 }
 
 .cart-modal-btn.continue:hover {
-  background: #f0bb00;
-  border-color: #f0bb00;
-  transform: translateY(-1px);
+  background: #f2eee3;
+  border-color: var(--accent-text);
+  transform: translateY(-2px);
 }
 
 .cart-modal-btn.view-cart {
-  background: transparent;
-  color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 1px solid var(--accent-border);
 }
 
 .cart-modal-btn.view-cart:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #ffffff;
-  color: #ffffff;
-  transform: translateY(-1px);
+  background: #4db1d7;
+  transform: translateY(-2px);
 }
 
 @keyframes cartFadeIn {
